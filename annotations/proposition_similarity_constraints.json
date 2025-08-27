@@ -1,0 +1,209 @@
+{
+  "for llm": {
+    "1": {
+      "label": "Equivalent propositions (propositions that both logically entail each other - a two-way implication):",
+      "1.1": {
+        "label": "synonymous subjects with distinct labels, identical objects and predicates",
+        "A": "[Chlorine dioxide] [increased] [rhamnose] levels in bacteria",
+        "B": "[ClO2] [increased] [rhamnose] levels in bacteria"
+      },
+      "1.2": {
+        "label": "synonymous objects with distinct labels, identical subjects and predicates",
+        "A": "[Chlorine dioxide] [suppressed] [Bromine monoxide] levels in bacteria",
+        "B": "[Chlorine dioxide] [suppressed] [BrO] levels in bacteria"
+      },
+      "1.3": {
+        "label": "synonymous but distinct predicates, identical subjects and objects",
+        "A": "[ClO2] [increased] [rhamnose] levels in bacteria",
+        "B": "[ClO2] [raised] [rhamnose] levels in bacteria"
+      },
+      "1.4": {
+        "label": "synonymous but distinct subjects and objects, identical predicates",
+        "A": "[ClO2] [increased] [rhamnose] levels in bacteria",
+        "B": "[Chlorine dioxide] [increased] [Rha] levels in bacteria"
+      },
+      "1.5": {
+        "label": "synonymous but distinct subjects and predicates, identical objects",
+        "A": "[ClO2] [raised] [Rha] levels in bacteria",
+        "B": "[Chlorine dioxide] [increased] [Rha] levels in bacteria"
+      },
+      "1.6": {
+        "label": "synonymous but distinct objects and predicates, indentical subjects",
+        "A": "[ClO2] [increased] [Rha] levels in bacteria",
+        "B": "[ClO2] [raised] [rhamnose] levels in bacteria"
+      },
+      "1.7": {
+        "label": "synonymouse but distinct subjects, objects and predicates",
+        "A": "[ClO2] [increased] [Rha] levels in bacteria",
+        "B": "[Chlorine dioxide] [raised] [rhamnose] levels in bacteria"
+      }
+    },
+    "2": {
+      "label": "One-way implications (propositions that logically entail each other in one direction) where one subject, object or predicate is a subset of the other:",
+      "2.1": {
+        "label": "one-way implication between subjects, identical objects and predicates",
+        "A": "[All human cells] [express] [XBP1]",
+        "B": "[B-Lymphocytes] [express] [XBP1]"
+      },
+      "2.2": {
+        "label": "one-way implication between objects, identical subjects and predicates",
+        "A": "[Phosphoenolpyruvate] level [is suppressed] by [artemisinin derivatives] in mice",
+        "B": "[Phosphoenolpyruvate] level [is suppressed] by [artenimol] in mice"
+      },
+      "2.3": {
+        "label": "one-way implication between predicates, identical subjects and objects",
+        "A": "[Phosphoenolpyruvate] level [is affected] by [artemisinin derivatives] in mice",
+        "B": "[Phosphoenolpyruvate] level [is suppressed] by [artemisinin derivatives] in mice"
+      }
+    },
+    "3": {
+      "label": "Contradictory propositions (with contradictory predicates and equivalent subjects or objects):",
+      "3.1": {
+        "label": "synonymous subjects with distinct labels, contradictory predicates and identical objects",
+        "A": "[Chlorine dioxide] [increased] [rhamnose] levels in bacteria",
+        "B": "[ClO2] [decreased] [rhamnose] levels in bacteria"
+      },
+      "3.2": {
+        "label": "synonymous objects with distinct labels, contradictory predicates and identical subjects",
+        "A": "[Phosphoenolpyruvate] level [is affected] by [rhamnose] levels in bacteria",
+        "B": "[Phosphoenolpyruvate] level [is not impacted] by [Rha] levels in bacteria"
+      },
+      "3.3": {
+        "label": "synonymous subjects and objects with distinct labels, contradictory predicates",
+        "A": "[ClO2 dioxide] [increased] [rhamnose] levels in bacteria",
+        "B": "[Chlorine dioxide] [decreased] [Rha] levels in bacteria"
+      }
+    },
+    "4": {
+      "label": "Unrelated propositions (with either unrelated subjects, objects, or predicates):",
+      "4.1": {
+        "label": "unrelated subjects, identical objects and predicates",
+        "A": "[Chlorine dioxide] [increased] [rhamnose] levels in bacteria",
+        "B": "[Nitrogen dioxide] [increased] [rhamnose] levels in bacteria"
+      },
+      "4.2": {
+        "label": "unrelated objects, identical subjects and predicates",
+        "A": "[Chlorine dioxide] [increased] [glucose] levels in bacteria",
+        "B": "[Chlorine dioxide] [increased] [rhamnose] levels in bacteria"
+      },
+      "4.3": {
+        "label": "unrelated predicates (distinct predicates that do not contradict or imply each other), identical subjects and objects",
+        "A": "[NSAIDs] [increase] the expression of [Zinc Transporters]",
+        "B": "[NSAIDs] [bind] to [Zinc Transporters]"
+      }
+    }
+  },
+  "for validation": {
+    "1.1": {
+        "comment": "synonymous subjects with distinct labels, identical objects and predicates",
+        "subject": "S",
+        "object": "I",
+        "predicate": "I"
+    },
+
+    "1.2":{
+        "comment": "synonymous objects with distinct labels, identical subjects and predicates",
+        "subject": "I",
+        "object": "S",
+        "predicate": "I"
+    },
+
+    "1.3": {
+        "comment": "synonymous but distinct predicates, identical subjects and objects",
+        "subject": "I",
+        "object": "I",
+        "predicate": "S"
+    },
+
+    "1.4": {
+        "comment": "synonymous but distinct subjects and objects, identical predicates",
+        "subject": "S",
+        "object": "S",
+        "predicate": "I"
+    },
+
+    "1.5": {
+        "comment": "synonymous but distinct subjects and predicates, identical objects",
+        "subject": "S",
+        "object": "I",
+        "predicate": "S"
+    },
+
+    "1.6": {
+        "comment": "synonymous but distinct objects and predicates, identical subjects",
+        "subject": "I",
+        "object": "S",
+        "predicate": "S"
+    },
+
+    "1.7": {
+        "comment": "synonymous but distinct subjects, objects and predicates",
+        "subject": "S",
+        "object": "S",
+        "predicate": "S"
+    },
+
+    "2.1": {
+        "comment": "one-way implication between subjects, identical objects and predicates",
+        "subject": "N",
+        "object": "I",
+        "predicate": "I"
+    },
+
+    "2.2": {
+        "comment": "one-way implication between objects, identical subjects and predicates",
+        "subject": "I",
+        "object": "N",
+        "predicate": "I"
+    },
+
+    "2.3": {
+        "comment": "one-way implication between predicates, identical subjects and objects",
+        "subject": "I",
+        "object": "I",
+        "predicate": "N"
+    },
+
+    "3.1": {
+        "comment": "synonymous subjects with distinct labels, contradictory predicates and identical objects",
+        "subject": "S",
+        "object": "I",
+        "predicate": "C"
+    },
+
+    "3.2": {
+        "comment": "synonymous objects with distinct labels, contradictory predicates and identical subjects",
+        "subject": "I",
+        "object": "S",
+        "predicate": "C"
+    },
+
+    "3.3": {
+        "comment": "synonymous subjects and objects with distinct labels, contradictory predicates",
+        "subject": "S",
+        "object": "S",
+        "predicate": "C"
+    },
+
+    "4.1": {
+        "comment": "unrelated subjects, identical objects and predicates",
+        "subject": "U",
+        "object": "I",
+        "predicate": "I"
+    },
+
+    "4.2": {
+        "comment": "unrelated objects, identical subjects and predicates",
+        "subject": "I",
+        "object": "U",
+        "predicate": "I"
+    },
+
+    "4.3": {
+        "comment": "unrelated predicates, identical subjects and objects",
+        "subject": "I",
+        "object": "I",
+        "predicate": "U"
+    }
+  }
+}

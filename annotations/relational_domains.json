@@ -1,0 +1,778 @@
+[
+    [
+        {
+            "title": "decrease",
+            "rationale": "All predicates that imply a decrease in a quantified measure.",
+            "predicates": [
+                "attenuated",
+                "dampened",
+                "deactivated",
+                "inactivated",
+                "decreased",
+                "diminished",
+                "inhibited",
+                "lowered",
+                "reduced",
+                "repressed",
+                "suppressed",
+                "silenced",
+                "was downregulated",
+                "was reduced",
+                "downregulated"
+            ]
+        },
+        {
+            "title": "increase",
+            "rationale": "All predicates that imply a increase in a quantified measure.",
+            "predicates": [
+                "activated",
+                "amplified",
+                "augmented",
+                "elevated",
+                "increased",
+                "raised",
+                "promoted",
+                "stimulated",
+                "boosted",
+                "upregulated",
+                "was upregulated",
+                "was increased",
+                "was elevated"
+            ]
+        },
+        {
+            "title": "no_increase_or_decrease",
+            "rationale": "All predicates that imply a lack of quantifiable effect on a measure.",
+            "predicates": [
+                "did not alter"
+            ]
+        }
+    ],
+    [
+        {
+            "title": "broadened",
+            "rationale": "All predicates that imply an increase or expansion in scope, width, or range.",
+            "predicates": [
+                "broadened",
+                "expanded"
+            ]
+        },
+        {
+            "title": "narrowed",
+            "rationale": "All predicates that imply a decrease, restriction, or narrowing in scope, width, or range.",
+            "predicates": [
+                "narrowed",
+                "restricted",
+                "confined",
+                "limited",
+                "curbed",
+                "restrained"
+            ]
+        }
+    ],
+    [
+        {
+            "title": "increase_in_speed",
+            "rationale": "All predicates that imply an increase or acceleration in speed or rate.",
+            "predicates": [
+                "accelerated",
+                "sped up"
+            ]
+        },
+        {
+            "title": "decrease_in_speed",
+            "rationale": "All predicates that imply a decrease, deceleration, or delay in speed or rate.",
+            "predicates": [
+                "slowed down",
+                "decelerated",
+                "delayed"
+            ]
+        }
+    ],
+    [
+        {
+            "title": "decrease_in_duration",
+            "rationale": "All predicates that imply a reduction or shortening in duration or length.",
+            "predicates": [
+                "shortened"
+            ]
+        },
+        {
+            "title": "increase_in_duration",
+            "rationale": "All predicates that imply an increase, extension, or prolongation in duration or length.",
+            "predicates": [
+                "extended",
+                "prolonged",
+                "lengthened"
+            ]
+        }
+    ],
+    [
+        {
+            "title": "bind",
+            "rationale": "All predicates that imply the subject is able to or has formed a binding interaction with the object.",
+            "predicates": [
+                "bound",
+                "was bound",
+                "coupled",
+                "was coupled",
+                "interacted"
+            ]
+        },
+        {
+            "title": "not_bind",
+            "rationale": "All predicates that imply the subject is unable to or has not formed a binding interaction with the object.",
+            "predicates": [
+                "was not bound",
+                "did not bind",
+                "disconnected",
+                "uncoupled",
+                "did not interact"
+            ]
+        }
+    ],
+    [
+        {
+            "title": "join",
+            "rationale": "All predicates that imply that the subject joined the objects into a complex or group.",
+            "predicates": [
+                "joined",
+                "merged",
+                "combined with",
+                "was mixed with"
+            ]
+        },
+        {
+            "title": "break",
+            "rationale": "All predicates that imply that the subject broke the objects apart, separated or did not combine them.",
+            "predicates": [
+                "broke apart",
+                "disrupted",
+                "did not combine with",
+                "was not combined with"
+            ]
+        }
+    ],
+    [
+        {
+            "title": "coordination",
+            "rationale": "Predicates that imply the coordination or organization of processes or events.",
+            "predicates": [
+                "orchestrated",
+                "coordinated",
+                "organized"
+            ]
+        },    
+        {
+            "title": "disorganization",
+            "rationale": "Predicates that imply the diruption of coordination of processes or events.",
+            "predicates": [
+                "disorganized"
+            ]
+        }    
+    ],
+    [
+        {
+            "title": "establishment",
+            "rationale": "All predicates that imply the establishment or confirmation of a finding.",
+            "predicates": [
+                "established",
+                "proved",
+                "confirmed",
+                "supported"
+            ]
+        },
+        {
+            "title": "prevention_of_establishment",
+            "rationale": "All predicates that imply the refutation of a finding.",
+            "predicates": [
+                "refuted",
+                "disproved",
+                "disconfirmed"
+            ]
+        }
+    ],
+    [
+        {
+            "title": "negative_correlation",
+            "rationale": "All predicates that imply a negative or inverse relationship between variables.",
+            "predicates": [
+                "was negatively correlated with",
+                "was negatively associated with",
+                "was a negative predictor of"
+            ]
+        },
+        {
+            "title": "positive_correlation",
+            "rationale": "All predicates that imply a positive or direct relationship between variables.",
+            "predicates": [
+                "was positively correlated with",
+                "positively correlated",
+                "was positively associated with",
+                "was a positive predictor of"
+            ]
+        },
+        {
+            "title": "no_correlation",
+            "rationale": "All predicates that explicitly state the absence of a correlation between variables.",
+            "predicates": [
+                "was not correlated with",
+                "was independent of"
+            ]
+        }
+    ],
+    [
+        {
+            "title": "reach_maximum",
+            "rationale": "All predicates that imply reaching the highest or peak value.",
+            "predicates": [
+                "peaked"
+            ]
+        },
+        {
+            "title": "reach_minimum",
+            "rationale": "All predicates that imply reaching the lowest or trough value.",
+            "predicates": [
+                "troughed"
+            ]
+        }
+    ],
+    [
+        {
+            "title": "critical",
+            "rationale": "Predicates that imply something is essential or necessary for a process or outcome.",
+            "predicates": [
+                "was critical for",
+                "was essential in",
+                "was required for",
+                "was necessary for"
+            ]
+        },
+        {
+            "title": "not_critical",
+            "rationale": "Predicates that imply something is not essential or not necessary for a process or outcome.",
+            "predicates": [
+                "was not required for",
+                "was not essential in"
+            ]
+        }
+    ],
+    [
+        {
+            "title": "sufficient",
+            "rationale": "Predicates that imply something is sufficient or adequate for a process or outcome.",
+            "predicates": [
+                "was sufficient for",
+                "was adequate for"
+            ]
+        },
+        {
+            "title": "not_sufficient",
+            "rationale": "Predicates that imply something is not sufficient or not adequate for a process or outcome.",
+            "predicates": [
+                "was not sufficient for",
+                "was not adequate for"
+            ]
+        }
+    ],
+    [
+        {
+            "title": "encoded_by",
+            "rationale": "All predicates that imply the subject is encoded by the object.",
+            "predicates": [
+                "encoded by"
+            ]
+        },
+        {
+            "title": "not_encoded_by",
+            "rationale": "All predicates that imply the subject is not encoded by the object.",
+            "predicates": [
+                "not encoded by"
+            ]
+        }
+    ],
+    [
+        {
+            "title": "detect",
+            "rationale": "All predicates that imply the presence or detection of something.",
+            "predicates": [
+                "was found",
+                "detected",
+                "was detected",
+                "observed"
+            ]
+        },
+        {
+            "title": "not_detect",
+            "rationale": "All predicates that imply the absence of detection of something.",
+            "predicates": [
+                "was not found",
+                "undetected",
+                "was not observed"
+            ]
+        }
+    ],
+    [
+        {
+            "title": "linked",
+            "rationale": "All predicates that imply the existence of an arbitrary association between subject and object.",
+            "predicates": [
+                "was linked to",
+                "was associated with",
+                "were associated with",
+                "was related to"
+            ]
+        },
+        {
+            "title": "not_linked",
+            "rationale": "All predicates that imply the absence of an association between subject and object.",
+            "predicates": [
+                "was not linked",
+                "was not associated",
+                "was unrelated"
+            ]
+        }
+    ],
+    [
+        {
+            "title": "give_medical_care",
+            "rationale": "All predicates that imply giving medical care or attention.",
+            "predicates": [
+                "healed",
+                "cured",
+                "treated"
+            ]
+        },
+        {
+            "title": "not_give_medical_care",
+            "rationale": "All predicates that imply not giving medical care or attention.",
+            "predicates": [
+                "did not heal",
+                "did not cure",
+                "did not treat"
+            ]
+        }
+    ],
+    [
+        {
+            "title": "predict",
+            "rationale": "All predicates that imply the ability to predict or make accurate forecasts.",
+            "predicates": [
+                "predicted"
+            ]
+        },
+        {
+            "title": "not_predict",
+            "rationale": "All predicates that imply the inability to predict or make accurate forecasts.",
+            "predicates": [
+                "not predicted"
+            ]
+        }
+    ],
+    [
+        {
+            "title": "serve_as",
+            "rationale": "All predicates that imply the subject served or could serve the function or role.",
+            "predicates": [
+                "served as",
+                "functioned as",
+                "played a role"
+            ]
+        },
+        {
+            "title": "not_serve_as",
+            "rationale": "All predicates that imply the subject did not serve or could not serve the function or role.",
+            "predicates": [
+                "did not serve"
+            ]
+        }
+    ],
+    [
+        {
+            "title": "select",
+            "rationale": "All predicates that indicate the subject has been chosen or picked.",
+            "predicates": [
+                "was selected",
+                "was chosen"
+            ]
+        },
+        {
+            "title": "not_select",
+            "rationale": "All predicates that indicate the subject has not been chosen or picked.",
+            "predicates": [
+                "was not selected"
+            ]
+        }
+    ],
+    [
+        {
+            "title": "contain",
+            "rationale": "All predicates that imply the presence or inclusion of something.",
+            "predicates": [
+                "contained",
+                "included",
+                "comprised"
+            ]
+        },
+        {
+            "title": "not_contain",
+            "rationale": "All predicates that imply the absence or exclusion of something.",
+            "predicates": [
+                "did not contain",
+                "excluded"
+            ]
+        }
+    ],
+    [
+        {
+            "title": "precede",
+            "rationale": "All predicates that imply the subject precedes the object in space or time.",
+            "predicates": [
+                "preceded",
+                "anteceded",
+                "came before",
+                "was prior to"
+            ]
+        },
+        {
+            "title": "follow",
+            "rationale": "All predicates that imply the subject follows the object in space or time.",
+            "predicates": [
+                "followed",
+                "came after",
+                "was subsequent to"
+            ]
+        }
+    ],
+    [
+        {
+            "title": "employ",
+            "rationale": "All predicates that indicate the subject was used to achieve a goal.",
+            "predicates": [
+                "was employed",
+                "was used"
+            ]
+        },
+        {
+            "title": "not_employ",
+            "rationale": "All predicates that imply the subject is not employed.",
+            "predicates": [
+                "was not employed",
+                "was not used"
+            ]
+        }
+    ],
+    [
+        {
+            "title": "admit",
+            "rationale": "All predicates that imply the admission or acceptance of something.",
+            "predicates": [
+                "admitted",
+                "accepted"
+            ]
+        },
+        {
+            "title": "not_admit",
+            "rationale": "All predicates that imply lack of admission of something.",
+            "predicates": [
+                "rejected",
+                "denied"
+            ]
+        }
+    ],
+    [
+        {
+            "title": "genetic_correlation",
+            "rationale": "All predicates that imply the existence of a genetic correlation between subject and object.",
+            "predicates": [
+                "was genetically correlated with",
+                "was a genetic risk factor for",
+                "was genetically linked to",
+                "was genetically associated with",
+                "were genetically associated with"
+            ]
+        },
+        {
+            "title": "no_genetic_correlation",
+            "rationale": "All predicates that explicitly state the absence of a genetic correlation between subject and object.",
+            "predicates": [
+                "was not genetically correlated with",
+                "was not a genetic risk factor for"
+            ]
+        }
+    ],
+    [
+        {
+            "title": "exhibit",
+            "rationale": "All predicates that imply the presence, showing, or manifestation of a property or behavior.",
+            "predicates": [
+                "exhibited",
+                "displayed",
+                "showed",
+                "represented",
+                "demonstrated",
+                "manifested",
+                "is characterized by",
+                "is marked by",
+                "had (property)"
+            ]
+        },
+        {
+            "title": "not_exhibit",
+            "rationale": "All predicates that imply the absence, lack, or non-manifestation of a property or behavior.",
+            "predicates": [
+                "did not exhibit",
+                "did not display",
+                "lacked (property)"
+            ]
+        }
+    ],
+    [
+        {
+            "title": "replacement",
+            "rationale": "All predicates that imply the act of replacing one entity with another.",
+            "predicates": [
+                "replaced",
+                "substituted",
+                "swapped"
+            ]
+        },
+        {
+            "title": "no_replacement",
+            "rationale": "All predicates that explicitly state the absence of replacement.",
+            "predicates": [
+                "did not replace"
+            ]
+        }
+    ],
+    [
+        {
+            "title": "identification",
+            "rationale": "All predicates that imply identification of a fact.",
+            "predicates": [
+                "identified",
+                "recognized",
+                "revealed"
+            ]
+        },
+        {
+            "title": "lack_of_identification",
+            "rationale": "All predicates that imply lack of identification.",
+            "predicates": [
+                "obscured", 
+                "failed to identify"
+            ]
+        }
+    ],
+    [
+        {
+            "title": "upregulated",
+            "rationale": "All predicates that imply an increase or upregulation in gene or protein expression.",
+            "predicates": [
+                "was overexpressed"
+            ]
+        },
+        {
+            "title": "downregulated",
+            "rationale": "All predicates that imply a decrease or downregulation in gene or protein expression.",
+            "predicates": [
+                "was underexpressed"
+            ]
+        }
+    ],
+    [
+        {
+            "title": "production",
+            "rationale": "All predicates that imply the creation or production of something.",
+            "predicates": [
+                "produced",
+                "synthesized",
+                "manufactured",
+                "created",
+                "formed",
+                "generated"
+            ]
+        },
+        {
+            "title": "degradation",
+            "rationale": "All predicates that imply the deconstruction of something.",
+            "predicates": [
+                "degraded",
+                "deconstructed",
+                "destroyed",
+                "disassembled",
+                "disintegrated"
+            ]
+        }
+    ],
+    [
+        {
+            "title": "appear",
+            "rationale": "All predicates that imply something is emerging or appearing.",
+            "predicates": [
+                "emerged",
+                "appeared",
+                "arose",
+                "occurred"
+            ]
+        },
+        {
+            "title": "disappear",
+            "rationale": "All predicates that imply something is disappearing.",
+            "predicates": [
+                "disappeared",
+                "was lost"
+            ]
+        }
+    ],
+    [
+        {
+            "title": "effect",
+            "rationale": "All predicates that imply an effect or influence is present.",
+            "predicates": [
+                "affected",
+                "influenced",
+                "was influenced",
+                "impacted",
+                "exerted",
+                "controlled",
+                "regulated"
+            ]
+        },
+        {
+            "title": "no_effect",
+            "rationale": "All predicates that explicitly state absence of effect or influence.",
+            "predicates": [
+                "did not affect",
+                "did not influence",
+                "was not influenced",
+                "did not impact"
+            ]
+        }
+    ],
+    [
+        {
+            "title": "positive_causation",
+            "rationale": "All predicates that imply the subject has a causal, contributory, or enabling effect on the object that is not explicitly positive or negative.",
+            "predicates": [
+                "resulted in",
+                "led to",
+                "caused",
+                "evoked",
+                "induced",
+                "triggered",
+                "contributed to",
+                "enabled",
+                "allowed",
+                "permitted",
+                "facilitated",
+                "achieved",
+                "was driven by"
+            ]
+        },
+        {
+            "title": "negative_causation",
+            "rationale": "All predicates that imply the subject prevents or counteracts the effects of the object.",
+            "predicates": [
+                "prevented",
+                "blocked",
+                "antagonized",
+                "counteracted",
+                "hindered",
+                "neutralized",
+                "interfered with",
+                "impeded",
+                "avoided"
+            ]
+        }
+    ],
+    [
+        {
+            "title": "localize",
+            "rationale": "All predicates that imply localization or targeting of the subject to a specific location or context.",
+            "predicates": [
+                "localized to",
+                "was located in",
+                "was found in",
+                "was observed in"
+            ]
+        },
+        {
+            "title": "not_localize",
+            "rationale": "All predicates that explicitly state the absence of localization or targeting.",
+            "predicates": [
+                "was not localized"
+            ]
+        }
+    ],
+    [
+        {
+            "title": "vaccinate",
+            "rationale": "All predicates that imply the subject has received a vaccination.",
+            "predicates": [
+                "was vaccinated"
+            ]
+        },
+        {
+            "title": "not_vaccinate",
+            "rationale": "All predicates that imply the subject has not received a vaccination.",
+            "predicates": [
+                "was not vaccinated"
+            ]
+        }
+    ],
+    [
+        {
+            "title": "has_capacity",
+            "rationale": "All predicates that imply the ability, potential, or capacity to perform an action or exhibit a property.",
+            "predicates": [
+                "was capable",
+                "was able"
+            ]
+        },
+        {
+            "title": "lacks_capacity",
+            "rationale": "All predicates that imply the absence of ability, potential, or capacity to perform an action or exhibit a property.",
+            "predicates": [
+                "was incapable",
+                "was unable"
+            ]
+        }
+    ],
+    [
+        {
+            "title": "positive_effect_on_unfavourable_condition",
+            "rationale": "All predicates that imply an improvement of an unfavourable condition.",
+            "predicates": [
+                "alleviated",
+                "ameliorated",
+                "relieved"
+            ]
+        },
+        {
+            "title": "negative_effect_on_unfavourable_condition",
+            "rationale": "All predicates that imply the worsening of an unfavourable condition.",
+            "predicates": [
+                "exacerbated",
+                "aggravated"
+            ]
+        }
+    ],
+    [   
+        {
+            "title": "negative_judgemental_effect",
+            "rationale": "All predicates that imply a worsening of outcome on the scale of undesired-desired relative to a neutral baseline.",
+            "predicates": [
+                "worsened"
+            ]
+        },
+        {
+            "title": "positive_judgemental_effect",
+            "rationale": "All predicates that imply an improvement of outcome on the scale of undesired-desired relative to a neutral baseline.",
+            "predicates": [
+                "enhanced",
+                "improved"
+            ]
+        }
+    ]
+]

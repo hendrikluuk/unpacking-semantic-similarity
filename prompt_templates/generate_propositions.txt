@@ -1,0 +1,151 @@
+You are a biomedical research expert highly skilled in the semantic analysis of propositions. You will be given a random selection of subjects, objects and predicates and a task to form two contextually plausible sentences with them. For each sentence you need to pick one subject, one object and a predicate while following the constraints given in the task instruction. Predicates are be given as relational domains that are lists composed of several subsets of contradictory predicates. You have to ignore predicates without synonyms if asked to provide sentences with synonymous but distinct predicates. The generated sentences DO NOT have to be factually correct, just contextually plausible. In case you introduce any modifying phrases to the subject or object, make sure the phrase is represented in both sentences to ensure strict adherence to the task instructions. **In the generated sentences, make sure to enclose in square brackets each subject, object and predicate (verb) that was used from the available options.** If the available subjects, objects and predicates do not seem to yield contextually plausible sentences then return an empty JSON object to request another set of concepts. Return a valid JSON object with the two sentences and corresponding annotations. Do not include markdown formatting.
+
+<example>
+Task description with an example:
+Generate semantically related proposition pairs based on the scheme below.
+1. Equivalent propositions (propositions that both logically entail each other - a two-way implication):
+    1.1. equivalent subjects with distinct labels 
+        A. "[Chlorine dioxide] [increased] [rhamnose] levels in bacteria"
+        B. "[ClO2] [increased] [rhamnose] levels in bacteria"
+
+Available subjects:
+[{
+        "domain": "chemistry",
+        "label1": "Hexamethylphosphoramide",
+        "label2": "HMPA"
+},
+{
+        "domain": "medicine",
+        "label1": "Aflatoxin B1",
+        "label2": "AFB1"
+},
+{
+        "domain": "biology",
+        "label1": "Sodium-Sulfate Cotransporter",
+        "label2": "SLC13A1"
+ }]
+
+Available objects:
+[{
+        "domain": "chemistry",
+        "label1": "Hexamethylphosphoramide",
+        "label2": "HMPA"
+},
+{
+        "domain": "medicine",
+        "label1": "Aflatoxin B1",
+        "label2": "AFB1"
+},
+{
+        "domain": "biology",
+        "label1": "Sodium-Sulfate Cotransporter",
+        "label2": "SLC13A1"
+ }]
+
+Available predicates:
+ [[
+        {
+            "title": "production",
+            "rationale": "All predicates that imply the creation or production of something.",
+            "predicates": [
+                "produced",
+                "synthesized",
+                "manufactured",
+                "created",
+                "formed",
+                "generated"
+            ]
+        },
+        {
+            "title": "degradation",
+            "rationale": "All predicates that imply the deconstruction of something.",
+            "predicates": [
+                "degraded",
+                "deconstructed",
+                "destroyed",
+                "disassembled",
+                "disintegrated"
+            ]
+        }
+    ],
+[
+        {
+            "title": "positive_causation",
+            "rationale": "All predicates that imply the subject has a causal, contributory, or enabling effect on the object that is not explicitly positive or negative.",
+            "predicates": [
+                "resulted in",
+                "led to",
+                "caused",
+                "evoked",
+                "induced",
+                "triggered",
+                "contributed to",
+                "enabled",
+                "allowed",
+                "permitted",
+                "facilitated",
+                "achieved",
+                "was driven by",
+                "implicated"
+            ]
+        },
+        {
+            "title": "negative_causation",
+            "rationale": "All predicates that imply the subject prevents or counteracts the effects of the object.",
+            "predicates": [
+                "prevented",
+                "blocked",
+                "antagonized",
+                "counteracted",
+                "hindered",
+                "neutralized",
+                "interfered with",
+                "impeded",
+                "avoided"
+            ]
+        }
+    ],
+[
+        {
+            "title": "positive_effect_on_condition",
+            "rationale": "All predicates that imply an improvement of an unfavourable condition.",
+            "predicates": [
+                "improved",
+                "treated",
+                "alleviated",
+                "ameliorated",
+                "relieved"
+            ]
+        },
+        {
+            "title": "negative_effect_on_condition",
+            "rationale": "All predicates that imply the worsening of an unfavourable condition.",
+            "predicates": [
+                "worsened",
+                "exacerbated",
+                "aggravated"
+            ]
+        }
+    ]
+]
+Result JSON:
+{"A": "[Aflatoxin B1] [induced] the activity of [sodium-sulfate co-transporter] in the rat liver.",
+"B": "[AFB1] [induced] the activity of [sodium-sulfate co-transporter] in the rat liver.",
+"rationale": "Propositions A and B imply each other (a two-way implication) and the subject is expressed with distinct labels as specified in the task."}
+</example>
+
+Task description with an example:
+Generate semantically related proposition pairs based on the scheme below.
+{task}
+
+Available subjects:
+{subjects}
+
+Available objects:
+{objects}
+
+Available predicates:
+{predicates}
+
+Result JSON:
+...

@@ -1,0 +1,44 @@
+You are given two different labels for the same concept. Make sure that these labels are both common enough and, in practice, unambiguously associated with the concept across various contexts. Do not entertain highly theoretical possibilities as a reason for suggesting an alternative label. Please suggest better alternatives for distinct labels. Format the response as valid JSON (do not add markdown formatting). Return an empty object {} if the labels are already well disambiguated. 
+
+<example>
+Input:
+{
+        "domain": "chemistry",
+        "label1": "Vanillin",
+        "label2": "C8H8O3",
+        "jaro_winkler_similarity": 0.0
+ }
+
+Output:
+{
+        "domain": "chemistry",
+        "label1": "Vanillin",
+        "label2": "4-hydroxy-3-methoxybenzaldehyde",
+        "jaro_winkler_similarity": 0.0,
+        "reason": "C8H8O3 is an ambiguous label as it can also refer to salicylic acid."
+ }
+</example>
+
+<example>
+Input:
+{
+        "domain": "chemistry",
+        "label1": "Propyne",
+        "label2": "C3H4",
+        "jaro_winkler_similarity": 0.0
+}
+
+Output:
+{
+"domain": "chemistry",
+"label1": "Propyne",
+"label2": "methylacetylene",
+"jaro_winkler_similarity": 0.0,
+"reason": "C3H4 is a molecular formula that can refer to both propyne and allene, making it ambiguous. A better alternative label would be 'methylacetylene', which is the IUPAC synonym for propyne and unambiguously refers to the same compound."
+}
+
+</example>
+
+Input: {input}
+Output (JSON):
+...

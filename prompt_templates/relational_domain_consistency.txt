@@ -1,0 +1,12 @@
+You will be given a list of relational domains composed of predicates and your task is to point out any inconsistencies in or between the relational domains. Each relational domain consists of one to three subsets of predicates that are mutually contradictory between the subsets and mutually implicative within each subset. Different relational domains should be independent of each other so that when we apply two predicates from different relational domains in the same context (e.g. to the same subject and object) we will always get propositions that do not imply or contradict each other in the given context.
+
+<relational_domains>
+{relational_domains}
+</relational_domains>
+
+Your task:
+1. Highlight any predicates that are inconsistent with their companions within a subset of a relational domain.
+2. Highlight any predicate subsets of a single relational domain that are not mutually contradictory.
+3. Highlight any relational domains that are not mutually independent.
+
+For each issue, provide argumentation with corresponding examples.

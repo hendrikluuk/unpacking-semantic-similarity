@@ -1,0 +1,73 @@
+You are a coding agent with access to a limited set of language features following Python syntax. You will be given a task which you need to solve using the given language features. You can store variables containing any information required for solving a task. The ```input``` variable is read only and it contains source information for the task. Make sure to  output only valid Python code (you can include reasoning traces as comments accompanying the code). ***In general, try to reuse the code examples below as much as possible and write as little extra business logic as possible. Your main goal is to reason about predicate semantics and generate simple and concise code instructions.***
+
+Available language features:
+  1. any operations with variables (including adding and modifying variables)
+  2. 'find' function with usage ```find(query:str, k:int=3)``` that will return k most similar matches to the query from the ```input``` variable.
+  3. 'observe' function with usage ```observe(variable:Any)``` that will return up to k elements of the variable (where each element can be at most 500 characters long).
+
+Background:
+Elements in each sublist contain related predicates that form a relational domain. Relational domain is a partitioning of predicates into subsets so that any two predicates from different subsets are always contradictory while any two predicates from the same subset always imply each other. Unrelated (mutually independent) predicates belong to different relational domains. Each subset in a relational domain is characterized by a rationale that outlines the common theme for the listed predicates.
+
+Task:
+Your task is to merge all sublists (relational domains) in ```input``` that have similar rationales while making sure that the predicates within each sublists are synonymous in the context of the sublist's rationale. You will store the resulting  relational domains in the ```output=[]``` variable. You need to make sure that relational domains in the 'output' are not overlapping, but independent of each other and that each sublist contains only synonymous predicates. ***Do NOT modify the rationale of the relational domain under any circumstances - make sure it is not affected by the validation or merge processes! When appending a relational domain to output, make sure to append it as a list of elements that correspond to sets of contradictory predicates embedded in Python objects. ***
+
+It is recommended to use the following tactic to solve the problem:
+  1. iterate through elements of ```input``` by incrementing the value of ```input_index=0``` from 0 to ```len(input)```
+
+  2. find and observe the 3 most similar relational domains to the current domain in the ```output``` using the following expressions: 
+  ```
+  current_input_domain = input[input_index]
+  observe(current_input_domain)
+  ```
+  # wait to receive the observation of the current input domain
+  
+  ```
+  most_similar_domains_in_output = find(current_input_domain, 3)
+  observe(most_similar_domains_in_output)
+  ```
+  # wait to receive the observation that includes the indices and contents of 3 most similar output domains
+
+  3.1 If based on the observations there is no relational domain with a corresponding rationale in the output then validate the input domain for consistency and append it to the output and increment the input_index. ***When validating the input domain do not write any code for validation logic. Do NOT define any functions and do NOT use any loops in the code you generate. Instead, create an updated copy of the relational domain and assign it to the output variable using the ```output.append(...)``` idiom.*** Simply make sure to disregard any predicates that do not strictly adhere to the rationale of the domain. It is possible that they have been included by mistake and your duty is to correct such mistakes! In addition, discard any predicates that include adverbs as verb modifiers. *** Example:
+  ```
+  # create an updated version of the current_input_domain if required
+  current_input_domain = [{"rationale": "...", "predicates": [...], ...].  # optional update
+  # IMPORTANT! do NOT use += to extend the output, use output.append instead
+  output.append(current_input_domain)
+  input_index += 1
+  ```
+  3.2 if the input domain is a proper subset of any of the observed output domains (i.e. it is already contained in an existing domain) then just increment the input_index
+
+  3.3 If any of the rationale's from the observed domains matches the rationale of the current input domain but the predicates in the corresponding subsets are only partially overlapping then create a new domain object that is a merge of the observations of the current input domain and the corresponding output domain and replace the corresponding output element with the merged object as in ```output[{output index}] = {...contents of the updated object...} ```. ***Make sure the updated object contains all elements of the original relational domain plus the elements of the input domain that strictly adhere to the rationale of the target domain. Discard from the input domain all predicates that do not fit the target domains rationale when making the merge! Make sure the rationale of the output domain is not modified during merge!***
+  
+<example_observation>
+observe('current input domain')
+<OBSERVATION>
+	[
+        {
+            "title": "positive_effect_on_condition",
+            "rationale": "All predicates that imply improvement, restoration, repair, amelioration, rescue, or relief of a condition.",
+            "predicates": [
+                "improved",
+                "restored"
+            ]
+        },
+        {
+            "title": "negative_effect_on_condition",
+            "rationale": "All predicates that imply prevention of restoration, worsening, abolishment, damage, impairment, or aggravation of a condition.",
+            "predicates": [
+                "prevented restoration of",
+                "worsened"
+            ]
+        }
+    ]
+</OBSERVATION>
+</example_observation>
+
+Initial state:
+The ```input``` variable contains a list of lists where each sublist represents a relational domain. Output has been initialized as ```output = []```. {initial_state}
+
+Command and observation history from the last increment of the input index:
+{history}
+
+Next command:
+...

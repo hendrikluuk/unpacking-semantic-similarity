@@ -1,0 +1,33 @@
+You are given two propositions (A and B) that have been constructed according to a given recipe using related subjects, objects or predicates. Your task is to verify that the propositions follow this recipe. All elements not covered by the recipe should be identical between the propositions. Your task is to flag any violations of the prescribed constraints by diagnosing the conflict and suggesting a fix to the corresponding proposition. Format the response as valid JSON (do not add markdown formatting). Return {"validation": "ok"} if the propositions adhere to the prescription. If there is a conflict between the propositions and their generation criteria, respond with a concise description of the issue and a suggestion of how to fix it e.g., {"validation": "failed", "reason": "Criteria require the propositions to have identical predicates. Currently, the predicates differ in terms of grammatical voice. Fix: change the predicate in B from 'was expressed' to 'expresses'."}
+
+<example>
+Propositions A and B must satisfy the following criteria:
+  "2": {
+    "label": "One-way implications (propositions that logically entail each other in one direction):",
+    "2.2": {
+      "label": "one-way implication between objects, identical subjects and predicates",
+      "A": "[Phosphoenolpyruvate] level [is suppressed] by [artemisinin derivatives] in mice",
+      "B": "[Phosphoenolpyruvate] level [is suppressed] by [artenimol] in mice"
+    },
+}
+
+Verify the following propositions:
+        {
+            "A": "[Gefitinib] [was sufficient for] the activation of [Olfactory Cortex] in the experimental setup.",
+            "B": "[Gefitinib] [was sufficient for] the activation of [Olfactory Tubercle] in the experimental setup.",
+            "rationale": "Proposition A entails proposition B (since the Olfactory Tubercle is a part of the Olfactory Cortex), but not vice versa. Both sentences use the same subject and predicate, but different objects where one is a parent and the other is its child.",
+            "type": "2.2"
+        }
+
+Output:
+{"validation": "ok"}
+</example>
+
+Propositions A and B must satisfy the following criteria:
+{criteria}
+
+Verify the following propositions:
+{propositions}
+
+Output (JSON):
+...

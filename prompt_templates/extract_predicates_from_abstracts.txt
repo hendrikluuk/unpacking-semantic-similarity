@@ -1,0 +1,27 @@
+Extract predicates (verbs with associated modifiers) related to the findings of the study from the following biomedical research abstracts into a json form. Return only JSON and nothing else. Do not use pronouns in context (e.g., replace "some of these markers" with the markers mentioned in the abstract). Leave the subject empty for sentences in passive voice. Do not add markdown formatting to the output. Make sure to escape any double quotes (e.g., change " to \") in  the abstract contents.
+
+<example>
+Abstract: Although we have previously shown that I-IFN, activated by interferon regulatory factor 3 (IRF3), plays an essential role in limiting prion invasion, the precise mechanisms underlying its protective effects remain unclear.  Here, using in vivo and ex vivo prion infection models, we discovered that 2'-5' oligoadenylate synthetase 1a (Oas1a), an interferon-stimulated gene downstream of the I-IFN receptor, inhibits prion invasion at an early stage. Using Oas1a-knockout mice, we show that loss of Oas1a significantly accelerates prion disease progression and shortens survival, demonstrating its protective role in vivo. In addition, we found that recombinant Oas1a, when applied extracellularly, inhibited prion propagation without activating conventional RNase L pathways. Mechanistically, Oas1a directly binds PrPC, preventing its conversion to PrPSc and thus limiting PrPSc accumulation in vitro. These findings highlight the critical role of the IFN-Oas1a axis in limiting prion propagation and underscore its potential as a novel therapeutic target for prion diseases.
+
+JSON:
+[{"subject": "gene/protein", "predicate": "inhibits", "object": "process", "context": {"gene/protein": "2'-5' oligoadenylate synthetase 1a (Oas1a)", "process": "prion invasion at an early stage"}}, {"subject": "loss of gene/protein", "predicate": "significantly accelerates", "object": "process", "context": {"gene/protein": "Oas1a", "process": "prion disease progression"}},{"subject": "loss of gene/protein", "predicate": "shortens", "object": "process", "context": {"gene/protein": "Oas1a", "process": "survival"}}, {"subject": "gene/protein", "predicate": "inhibited", "object": "process", "context": {"gene/protein": "recombinant Oas1a", "process": "prion propagation"}}, {"subject": "protein1", "predicate": "directly binds", "object": "protein2", "context": {"protein1": "Oas1a", "protein2": "PrPSc"}}]
+</example>
+
+<example>
+Abstract: Aims: In Friedreich ataxia (FRDA), early motor discoordination stems from dysfunctional sensory neurons in the spinal cord driven by epigenetic dysregulation, frataxin (FXN) deficiency, oxidative stress, and inflammation. Omaveloxolone, a nuclear factor erythroid 2-related factor-2 (NRF2) inducer, is the only treatment available.Results: The successful generation of the FRDA and isogenic control sensory neurons was confirmed by the positive expression of beta-III TUBULIN, BRN3A, ISLET1, PERIPHERIN, and tropomyosin receptor kinase C. In comparison with the isogenic control, FRDA sensory neurons displayed an aberrant gene expression profile alike to that reported in patients. None of the drugs affected the viability of the isogenic control sensory neurons. SF treatment improved the viability of FRDA sensory neurons by up to 61% versus the untreated control. DMF treatment showed a modest 35% increase, while omaveloxolone lacked an effect. SF-treated FRDA sensory neurons demonstrated increased reduced glutathione/oxidized glutathione ratio and expression of FXN and redox markers, and a reduced expression of selected epigenetic enzymes and inflammatory cytokines, at the respective gene and protein levels. DMF and omaveloxolone treatments only modulated some of these biomarkers. Innovation: We revealed the therapeutic potential of SF and how it performs in comparison with omaveloxolone and DMF, in a physiologically and genetically relevant in vitro FRDA model. Conclusion: SF offers a multipronged approach to alleviating the different cellular events underlying FRDA. Antioxid. Redox Signal. 00, 000-000. [Figure: see text]
+
+JSON:
+[{"subject": "treatment", "predicate": "improved", "object": "readout", "context": {"treatment": "SF treatment", "readout": "viability of FRDA sensory neurons by up to 61% versus the untreated control"}},{"subject": "treatment", "predicate": "showed", "object": "readout", "context": {"treatment": "DMF treatment", "readout": "modest 35% increase in viability"}},{"subject": "treatment", "predicate": "lacked", "object": "outcome", "context": {"treatment": "omaveloxolone", "outcome": "effect on FRDA sensory neurons"}},{"subject": "treatment", "predicate": "demonstrated", "object": "readout", "context": {"treatment": "SF-treated FRDA sensory neurons", "process": "increased reduced glutathione/oxidized glutathione ratio and expression of FXN and redox markers"}},{"subject": "treatment", "predicate": "reduced", "object": "readout", "context": {"treatment": "SF treatment", "phenotype": "expression of selected epigenetic enzymes and inflammatory cytokines"}}]
+</example>
+
+<example>
+Abstract:  Clinically, the plasma concentration of DHCR24 was significantly decreased in patients with SCM. 
+
+JSON:
+[{"subject": "", "predicate": "was significantly decreased", "object": "readout", "context": {"readout": "the plasma concentration of DHCR24"}}]
+</example>
+
+{abstracts}
+
+JSON:
+...

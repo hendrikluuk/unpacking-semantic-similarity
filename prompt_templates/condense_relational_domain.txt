@@ -1,0 +1,46 @@
+You are given various subsets of predicates. Your task is to condense these subsets into 2 or 3 mutually exclusive subsets. When any two predicates from a single subset are applied to the same arguments (subject and object) they will yield propositions that imply each other. Conversely, when any two predicates from different subsets are applied to the same arguments they will yield contradictory propositions. Please output a JSON object that sorts predicates into mutually contradictory subsets. Remove any predicates that are not directly related to the subsets. Harmonize the tense of predicates to past participle and remove any repeats of the same predicate in different tenses. Respond with JSON and nothing else. Do not add any markdown formatting.
+
+<example>
+Subsets of predicates:
+ "subset1": [
+      "can inhibit",
+      "does not activate",
+      "inhibited",
+      "repressed",
+      "inhibits",
+      "deactivates"
+    ],
+    "subset2": [
+      "activates",
+      "stimulates",
+      "induces"
+    ],
+    "subset3": [
+      "reverses"
+    ],
+    "subset4": [
+      "suppresses"
+    ],
+    "subset5": [
+      "prevents"
+    ]
+}
+
+Result (JSON):
+[{"title": "negative_effect", "rationale": "All predicates that imply inhibition, repression, reduction, or prevention of an effect", "predicates": ["inhibited", "repressed", "deactivated", "suppressed", "prevented"]},
+{"title": "positive_effect", "rationale": "All predicates that imply activation, enhancement, promotion, or increase of an effect.", "predicates": ["activated", "stimulated", "induced"]}, {"title": "neutral_or_no_effect", "rationale": "All predicates that explicitly state no effect, no induction, or no regulation.", "predicates": ["does not regulate", "does not affect", "does not induce"]}]
+</example>
+
+<example>
+Subsets of predicates:
+{"subset1": ["accelerates"],"subset2": ["slows down","decelerates","delays"]}
+
+Result (JSON):
+[{"title": "increase_in_speed", "rationale": "All predicates that imply an increase or acceleration in speed or rate.", "predicates": ["accelerated"]}, {"title": "decrease_in_speed", "rationale": "All predicates that imply a decrease, deceleration, or delay in speed or rate.", "predicates": ["slowed down", "decelerated", "delayed"]}]
+</example>
+
+Subsets of predicates:
+{relational_domain}
+
+Result (JSON):
+...

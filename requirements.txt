@@ -1,0 +1,29 @@
+requests
+
+# for downloading abstracts
+biopython
+
+# for string distance
+jarowinkler
+
+# for embedding
+# fix for https://huggingface.co/nvidia/NV-Embed-v2/discussions/43
+sentence-transformers
+
+# for token-level similarity
+tiktoken
+
+# for machine learning
+pandas
+plotly
+matplotlib
+nbformat>=4.2.0
+
+# for writing to Excel
+openpyxl
+
+# for jupyter notebook
+ipykernel
+
+# for MANOVA
+statsmodels

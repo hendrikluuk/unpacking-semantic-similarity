@@ -1,0 +1,162 @@
+[
+    {
+        "a": "Five plus three equals eight.",
+        "b": "Seven minus six is one.",
+        "context switch": 0,
+        "a -> b": 0.9,
+        "b -> a": 0.9,
+        "reasoning": "Propositions are not logically independent because all natural numbers are connected via a recursive definition. However, it would require complex reasoning to establish a connection between the two propositions, which is impractical for an embedding model.",
+        "char(a ~ b)": 0.6019133290497609,
+        "token(a ~ b)": 0.12878787878787878
+    },
+    {
+        "a": "WFS1 protein deficiency activates BNIP3.",
+        "b": "WFS1 protein deficiency activates BCL2 interacting protein 3.",
+        "context switch": 0,
+        "a -> b": 1.0,
+        "b -> a": 1.0,
+        "reasoning": "Propositions entail each other because BNIP3 and 'BCL2 interacting protein 3' are synonymous.",
+        "char(a ~ b)": 0.9063114754098361,
+        "token(a ~ b)": 0.6
+    },
+    {
+        "a": "WFS1 protein deficiency suppresses NAD(P)H quinone dehydrogenase 1.",
+        "b": "Wolframin deficiency inhibits NQO1.",
+        "context switch": 0,
+        "a -> b": 1.0,
+        "b -> a": 1.0,
+        "reasoning": "Propositions entail each other because 'WFS1 protein' and Wolframin are synonymous, 'NAD(P)H quinone dehydrogenase' and NQO1 are synonymous and so are 'suppress' and 'inhibit'.",
+        "char(a ~ b)": 0.5692799737575857,
+        "token(a ~ b)": 0.23634453781512604
+    },
+    {
+        "a": "Earth orbits around the sun.",
+        "b": "Sun is orbited by earth.",
+        "context switch": 0,
+        "a -> b": 1.0,
+        "b -> a": 1.0,
+        "reasoning": "Propositions entail each other as they only differ in terms of being expressed in active vs passive voice.",
+        "char(a ~ b)": 0.6345704948646125,
+        "token(a ~ b)": 0.11858974358974358
+    },
+    {
+        "a": "WFS1 protein deficiency activates XBP1.",
+        "b": "WFS1 protein deficiency activates BNIP1.",
+        "context switch": 0,
+        "a -> b": 0.0,
+        "b -> a": 0.0,
+        "reasoning": "Propositions do not entail each other because XBP1 and BNIP1 proteins are independent entities.",
+        "char(a ~ b)": 0.9848717948717949,
+        "token(a ~ b)": 0.7181818181818183
+    },
+    {
+        "a": "Wfs1 protein is a transcription factor.",
+        "b": "Wnt1 protein is a transcription factor.",
+        "context switch": 0,
+        "a -> b": 0.0,
+        "b -> a": 0.0,
+        "reasoning": "Propositions do not entail each other because Wfs1 and Wnt proteins are independent entities.",
+        "char(a ~ b)": 0.8395010395010395,
+        "token(a ~ b)": 0.8444444444444444
+    },
+    {
+        "a": "Acute myeloid leukemia is a life-threatening disease.",
+        "b": "Acute myeloid leukemia is inherited.",
+        "context switch": 0,
+        "a -> b": 0.0,
+        "b -> a": 0.0,
+        "reasoning": "Propositions do not entail each other because life-threatening and hereditary are independent properties.",
+        "char(a ~ b)": 0.916528785679729,
+        "token(a ~ b)": 0.6493506493506493
+    },
+    {
+        "a": "Acute myeloid leukemia is not a life-threatening disease.",
+        "b": "Acute myeloid leukemia is inherited.",
+        "context switch": 0,
+        "a -> b": 0.0,
+        "b -> a": 0.0,
+        "reasoning": "Propositions do not entail each other because life-threatening and hereditary are independent properties.",
+        "char(a ~ b)": 0.916528785679729,
+        "token(a ~ b)": 0.6493506493506493
+    },
+    {
+        "a": "Wnt1 protein is a highly expressed transcription factor.",
+        "b": "Wnt1 protein is a transcription factor with low expression levels.",
+        "context switch": 0,
+        "a -> b": -1.0,
+        "b -> a": -1.0,
+        "reasoning": "Propositions contradict each other because they assert contradictory properties on the same entity.",
+        "char(a ~ b)": 0.8855977355977357,
+        "token(a ~ b)": 0.675
+    },
+    {
+        "a": "WFS1 protein deficiency activates XBP1.",
+        "b": "WFS1 protein deficiency inhibits XBP1.",
+        "context switch": 0,
+        "a -> b": -1.0,
+        "b -> a": -1.0,
+        "reasoning": "Propositions contradict each other because 'activates' and 'inhibits' are contradictory predicates.",
+        "char(a ~ b)": 0.936854373696479,
+        "token(a ~ b)": 0.7922077922077921
+    },
+    {
+        "a": "WFS1 protein expression is abundant in amygdala.",
+        "b": "Wolframin expression is low in amygdaloid nuclei.",
+        "context switch": 0,
+        "a -> b": -1.0,
+        "b -> a": -1.0,
+        "reasoning": "Propositions contradict each other because 'is abundant' and 'is low' are contradictory predicates while the other entities are synonymous.",
+        "char(a ~ b)": 0.7523752068394925,
+        "token(a ~ b)": 0.45344129554655865
+    },
+    {
+        "a": "Earth orbits around the sun.",
+        "b": "Earth does not orbit the sun.",
+        "context switch": 0,
+        "a -> b": -1.0,
+        "b -> a": -1.0,
+        "reasoning": "Propositions contradict each other due to contradictory predicates being applied to equivalent entities.",
+        "char(a ~ b)": 0.8949852216748768,
+        "token(a ~ b)": 0.5299145299145299
+    },
+    {
+        "a": "WFS1 protein deficiency activates XBP1.",
+        "b": "Moon orbits around the earth.",
+        "context switch": 1,
+        "a -> b": 0.0,
+        "b -> a": 0.0,
+        "reasoning": "Propositions do not entail each other because WFS1 protein and moon are independent entities.",
+        "char(a ~ b)": 0.545927890755477,
+        "token(a ~ b)": 0.09821428571428571
+    },
+    {
+        "a": "Paris is the capital of France.",
+        "b": "Moon orbits around the earth.",
+        "context switch": 1,
+        "a -> b": 0.0,
+        "b -> a": 0.0,
+        "reasoning": "Propositions do not entail each other because Paris and Moon are independent entities.",
+        "char(a ~ b)": 0.6226671610431344,
+        "token(a ~ b)": 0.24475524475524477
+    },
+    {
+        "a": "Seven minus six is one.",
+        "b": "WFS1 protein deficiency activates BNIP1.",
+        "context switch": 1,
+        "a -> b": 0.0,
+        "b -> a": 0.0,
+        "reasoning": "Propositions do not entail each other because 'seven minus six' and WFS1 protein are independent entities.",
+        "char(a ~ b)": 0.5735507246376811,
+        "token(a ~ b)": 0.09821428571428571
+    },
+    {
+        "a": "Wnt1 protein is not a transcription factor.",
+        "b": "London is the capital of UK.",
+        "context switch": 1,
+        "a -> b": 0.0,
+        "b -> a": 0.0,
+        "reasoning": "Propositions do not entail each other because Wnt1 protein and London are independent entities.",
+        "char(a ~ b)": 0.6142655793818584,
+        "token(a ~ b)": 0.1843137254901961
+    }
+]
