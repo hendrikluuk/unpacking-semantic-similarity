@@ -12,18 +12,18 @@ While the Github copilot can help you in doing that, here are some bread crumbs 
 
 ```python
 """
-https://github.com/hendrikluuk/unpacking-semantic-similarity/blob/main/utils/call_llm.py
+utils/call_llm.py
 """
 base_url = f"TODO:REPLACE"
 user_id = os.getenv('LLM_API_USER_ID')
 
 """
-https://github.com/hendrikluuk/unpacking-semantic-similarity/blob/main/utils/api_model.py
+utils/api_model.py
 """
 baseurl = "TODO:REPLACE WITH EMBEDDING API URL"
 
 """
-https://github.com/hendrikluuk/unpacking-semantic-similarity/blob/main/download_pubmed_abstracts.py
+download_pubmed_abstracts.py
 """
 # PubMed wants to know who you are before letting you download thousands of abstracts
 email_address = os.getenv('PUBMED_ACCOUNT_EMAIL')
@@ -33,7 +33,7 @@ email_address = os.getenv('PUBMED_ACCOUNT_EMAIL')
 
 #### Harvesting of synonymous and parent-child concept labels
 
-1. Clone the https://github.com/hendrikluuk/probing-concepts repo and create a symlink to it into the present project's folder
+1. Clone the [anonymized] repo and create a symlink to it into the present project's folder
 
    ```bash
    ln -s ../probing_concepts probing_concepts
