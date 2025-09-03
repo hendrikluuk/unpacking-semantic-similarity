@@ -139,45 +139,49 @@ email_address = os.getenv('PUBMED_ACCOUNT_EMAIL')
 ./embed_samples.py --pattern annotations/trial.json
 ```
 
-9. Train projections
+3. Train projections
 
 ```bash
 # will store results in out/train_results<out_dim>.json
 ./train.sh
 ```
 
-11. Summarize results as an Excel table
+
+
+#### Summarization of results
+
+1. Summarize results as an Excel table
 
 ```bash
 # will store results in ./train_results_summary.xlsx
 ./summarize_train_results.py
 ```
 
-12. Compare the deviation of predictions by domain between certain model pairs
+2. Compare the deviation of predictions by domain between certain model pairs
 
-    ```bash
-    # stores all comparisons in out/prediction_error_comparison.json
-    ./compare_deltas.sh
-    ```
+```bash
+# stores all comparisons in out/prediction_error_comparison.json
+./compare_deltas.sh
+```
 
-12. Identify proposition construction schemas where the estimates of semantic entailment are most divergent between the compared models
+3. Identify proposition construction schemas where the estimates of semantic entailment are most divergent between the compared models
 
-    ```bash
-    # use 'out/prediction_error_comparison.json' as input to estimate differential error significance
-    # stores the output in out/entailment_categories_with_differential_error_significance.csv
-    ./get_entailment_categories_with_high_error_differential.py
-    ```
+```bash
+# use 'out/prediction_error_comparison.json' as input to estimate differential error significance
+# stores the output in out/entailment_categories_with_differential_error_significance.csv
+./get_entailment_categories_with_high_error_differential.py
+```
 
-12. Perform similarity prediction on the validation dataset
+4. Perform similarity prediction on the validation dataset
 
-    ```bash
-    # stores the predictions in 'out/cosine_similarity_trial.json'
-    ./estimate_cosine_similarity.py
-    ```
+```bash
+# stores the predictions in 'out/cosine_similarity_trial.json'
+./estimate_cosine_similarity.py
+```
 
-12. Decompose the validation predictions into components
+5. Decompose the validation predictions into components
 
-    ```bash
-    # will store results in './trial_summary.xlsx'
-    ./regression_analysis_of_cosine_similarity.py
-    ```
+```bash
+# will store results in './trial_summary.xlsx'
+./regression_analysis_of_cosine_similarity.py
+```
