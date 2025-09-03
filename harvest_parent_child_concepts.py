@@ -141,7 +141,7 @@ def main():
     """
     Extract parent-child pairs of concepts.
     """
-    directory = 'probing_concepts/concepts'
+    directory = 'external_resources/probing_concepts/concepts'
     pattern = '*.json'
     results = process_json_files(directory, pattern)
     results = sorted(results, key=lambda x: x['ss_sym'])

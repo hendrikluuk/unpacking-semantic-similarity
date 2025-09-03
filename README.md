@@ -33,15 +33,7 @@ email_address = os.getenv('PUBMED_ACCOUNT_EMAIL')
 
 #### Harvesting of synonymous and parent-child concept labels
 
-1. Clone the [anonymized] repo and create a symlink to it into the present project's folder
-
-   ```bash
-   ln -s ../probing_concepts probing_concepts
-   ```
-
-   
-
-2. Harvest synonymous labels of conceptual entities from the LLM responses in the "limited-list-referents" task from the "probing concepts" study.
+1. Harvest synonymous labels of conceptual entities from the LLM responses in the "limited-list-referents" task from the "probing concepts" study (relevant files are provided in external_resources folder).
 
    ```bash
    ./harvest_equivalent_concepts.py

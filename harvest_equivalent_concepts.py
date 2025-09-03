@@ -97,7 +97,7 @@ def save_to_json(data: list[dict], filename: str):
         json.dump(data, f, indent=4)
 
 def main():
-    data = load_json_files('probing_concepts/scores', '*limited-list-referents*.json')
+    data = load_json_files('external_resources/probing_concepts/scores', '*limited-list-referents*.json')
     matches = extract_matches(data)
     filtered = filter_and_parse_matches(matches)
     save_to_json(sorted(filtered, key=lambda x: x['jaro_winkler_similarity']), 'out/equivalent_concepts.json')
